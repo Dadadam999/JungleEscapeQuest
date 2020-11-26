@@ -1,0 +1,62 @@
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+
+	self.tree = gui.get_node("tree")
+	self.metal = gui.get_node("metal")
+	self.think_btn = gui.get_node("think_btn")
+	self.exit = gui.get_node("exit")
+	self.v1 = gui.get_node("v1")
+	self.v2 = gui.get_node("v2")
+	self.v3 = gui.get_node("v3")
+	self.bg = gui.get_node("bg")
+
+	-- Disable GUI Nodes during Opening Logo Animations
+	gui.set_enabled(self.tree, false)
+	gui.set_enabled(self.metal, false)
+	gui.set_enabled(self.think_btn, false)
+	gui.set_enabled(self.v1, false)
+	gui.set_enabled(self.v2, false)
+	gui.set_enabled(self.v3, false)
+	gui.set_enabled(self.exit, false)
+	gui.set_enabled(self.bg, false)
+end
+
+
+function final(self)
+	--msg.post(".", "release_input_focus")
+end
+
+
+-- -------------------------------------------------------------------------------------------
+-- Input Processes
+
+function on_input(self, action_id, action)
+	
+
+	-- Process User Selection of the Level 1 Button
+	if action.pressed and gui.pick_node(self.exit, action.x, action.y) then
+		gui.set_enabled(self.tree, false)
+		gui.set_enabled(self.metal, false)
+		gui.set_enabled(self.think_btn, false)
+		gui.set_enabled(self.v1, false)
+		gui.set_enabled(self.v2, false)
+		gui.set_enabled(self.v3, false)
+		gui.set_enabled(self.exit, false)
+		gui.set_enabled(self.bg, false)
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("load_think") then
+		gui.set_enabled(self.tree, true)
+		gui.set_enabled(self.metal, true)
+		gui.set_enabled(self.think_btn, true)
+		gui.set_enabled(self.v1, true)
+		gui.set_enabled(self.v2, true)
+		gui.set_enabled(self.v3, true)
+		gui.set_enabled(self.exit, true)
+		gui.set_enabled(self.bg, true)
+	end
+	--
+end

@@ -119,6 +119,10 @@ local key = action_id
 			self.input_press = false
 		end
 	end
+
+	if key == hash("Q") then
+		msg.post("/think_go#think", "load_think")
+	end
 	
 	if vmath.length(self.axis) > 0 then
 		self.moving = true
@@ -160,11 +164,9 @@ function on_message(self, message_id, message, sender)
 	
 	if message.group == hash("tree") then
 		msg.post("/inventory_go#inventory", "tree_take")
-		go.delete("/object1")
 	end
 
 	if message.group == hash("metal") then
 		msg.post("/inventory_go#inventory", "metal_take")
-		go.delete("/object2")
 	end
 end
