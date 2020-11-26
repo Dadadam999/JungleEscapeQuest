@@ -10,6 +10,9 @@ function init(self)
 	self.h_camera = self.h_screen
 	self.w_camera = self.w_screen
 
+
+	msg.post("@render:", "use_fixed_projection", { zoom = 3 })
+	--msg.post("@render:", "use_fixed_fit_projection")
 	print(go.get_id())
 end
 
