@@ -62,10 +62,10 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "gui"
+  id: "inventory_go"
   data: "components {\n"
-  "  id: \"level\"\n"
-  "  component: \"/gui/level.gui\"\n"
+  "  id: \"inventory1\"\n"
+  "  component: \"/gui/inventory1.gui\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"

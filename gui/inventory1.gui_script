@@ -1,7 +1,10 @@
 function init(self)
-	-- Add initialization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	self.metal = gui.get_node("metal")
+	self.tree = gui.get_node("tree")
+
+	gui.set_enabled(self.metal, false)
+	gui.set_enabled(self.tree, false)
+
 end
 
 function final(self)
@@ -17,9 +20,14 @@ function update(self, dt)
 end
 
 function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Learn more: https://defold.com/manuals/message-passing/
-	-- Remove this function if not needed
+	if message_id == hash("level1_tree_take") then
+		gui.set_enabled(self.tree, true)
+	end
+
+	if message_id == hash("level1_metal_take") then
+		gui.set_enabled(self.metal, true)
+	end
+	
 end
 
 function on_input(self, action_id, action)
@@ -31,11 +39,5 @@ function on_input(self, action_id, action)
 	-- All mapped input bindings will be received. Mouse and touch input will
 	-- be received regardless of where on the screen it happened.
 	-- Learn more: https://defold.com/manuals/input/
-	-- Remove this function if not needed
-end
-
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Learn more: https://defold.com/manuals/hot-reload/
 	-- Remove this function if not needed
 end

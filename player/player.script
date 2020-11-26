@@ -40,22 +40,18 @@ end
 function on_input(self, action_id, action) -- отзеркаливание sprite.set_hflip("#sprite", false)
 local key = action_id
 
-	if key == hash("W") then
+if key == hash("W") then
 		self.key_input = "MoveUpPlayer"
 		self.axis.y = 1
-		
 		key = self.key_input
 		
 		if action.pressed then
 			self.input_press = true
-		end
-
-		if action_id == hash(self.key_input) and self.input_press then
-			sprite.play_flipbook("#sprite", hash("up"))
+			sprite.play_flipbook("#sprite", hash("up-idle"))
 		end
 
 		if action.released then
-			sprite.play_flipbook("#sprite", hash("up-idle"))
+			sprite.play_flipbook("#sprite", hash("up"))
 			self.input_press = false
 		end
 	end
@@ -63,19 +59,15 @@ local key = action_id
 	if key == hash("S") then
 		self.key_input = "MoveDownPlayer"
 		self.axis.y = -1
-			
 		key = self.key_input
 		
 		if action.pressed then
 			self.input_press = true
-		end
-
-		if key == hash(self.key_input) and self.input_press then
-			sprite.play_flipbook("#sprite", hash("down"))
+			sprite.play_flipbook("#sprite", hash("down-idle"))
 		end
 		
 		if action.released then
-			sprite.play_flipbook("#sprite", hash("down-idle"))
+			sprite.play_flipbook("#sprite", hash("down"))
 			self.input_press = false
 		end
 	end
@@ -83,19 +75,15 @@ local key = action_id
 	if key == hash("A") then
 		self.key_input = "MoveLeftPlayer"
 		self.axis.x = -1
-
 		key = self.key_input
 		
 		if action.pressed then
 			self.input_press = true
-		end
-
-		if key == hash(self.key_input) and self.input_press then
-			sprite.play_flipbook("#sprite", hash("left"))
+			sprite.play_flipbook("#sprite", hash("left-idle"))
 		end
 		
 		if action.released then
-			sprite.play_flipbook("#sprite", hash("left-idle"))
+			sprite.play_flipbook("#sprite", hash("left"))
 			self.input_press = false
 		end
 	end
@@ -103,19 +91,15 @@ local key = action_id
 	if key == hash("D") then
 		self.key_input = "MoveRightPlayer"
 		self.axis.x = 1
-
 		key = self.key_input
 			
 		if action.pressed then
 			self.input_press = true
-		end
-
-		if key == hash(self.key_input) and self.input_press then
-			sprite.play_flipbook("#sprite", hash("right"))
+			sprite.play_flipbook("#sprite", hash("right-idle"))
 		end
 		
 		if action.released then
-			sprite.play_flipbook("#sprite", hash("right-idle"))
+			sprite.play_flipbook("#sprite", hash("right"))
 			self.input_press = false
 		end
 	end
@@ -163,10 +147,10 @@ function on_message(self, message_id, message, sender)
 	end
 	
 	if message.group == hash("tree") then
-		msg.post("/inventory_go#inventory", "tree_take")
+		msg.post("/inventory_go#inventory", "level1_tree_take")
 	end
 
 	if message.group == hash("metal") then
-		msg.post("/inventory_go#inventory", "metal_take")
+		msg.post("/inventory_go#inventory", "level1_metal_take")
 	end
 end
