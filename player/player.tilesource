@@ -1,233 +1,44 @@
-image: "/assets/player/player.png"
+image: "/assets/player/playerRUN.png"
 tile_width: 16
-tile_height: 16
+tile_height: 24
 tile_margin: 0
 tile_spacing: 0
 collision: ""
 material_tag: "tile"
 collision_groups: "default"
 animations {
-  id: "down"
-  start_tile: 1
-  end_tile: 2
-  playback: PLAYBACK_LOOP_FORWARD
-  fps: 60
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "down-blood"
-  start_tile: 7
-  end_tile: 7
-  playback: PLAYBACK_NONE
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
   id: "down-idle"
-  start_tile: 5
-  end_tile: 5
-  playback: PLAYBACK_NONE
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "downG"
-  start_tile: 11
-  end_tile: 12
-  playback: PLAYBACK_ONCE_FORWARD
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "downG-idle"
-  start_tile: 13
-  end_tile: 13
-  playback: PLAYBACK_NONE
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "downH"
-  start_tile: 3
-  end_tile: 4
-  playback: PLAYBACK_ONCE_FORWARD
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "downH-idle"
-  start_tile: 9
-  end_tile: 9
-  playback: PLAYBACK_NONE
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "left"
-  start_tile: 35
-  end_tile: 36
+  start_tile: 17
+  end_tile: 20
   playback: PLAYBACK_LOOP_FORWARD
-  fps: 60
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "left-blood"
-  start_tile: 38
-  end_tile: 38
-  playback: PLAYBACK_NONE
-  fps: 11
+  fps: 8
   flip_horizontal: 0
   flip_vertical: 0
 }
 animations {
   id: "left-idle"
-  start_tile: 35
-  end_tile: 35
-  playback: PLAYBACK_NONE
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "leftG"
-  start_tile: 43
-  end_tile: 44
-  playback: PLAYBACK_ONCE_FORWARD
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "leftG-idle"
-  start_tile: 45
-  end_tile: 45
-  playback: PLAYBACK_NONE
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "leftH"
-  start_tile: 39
-  end_tile: 40
-  playback: PLAYBACK_ONCE_FORWARD
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "leftH-idle"
-  start_tile: 41
-  end_tile: 41
-  playback: PLAYBACK_ONCE_FORWARD
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "right"
-  start_tile: 23
-  end_tile: 24
+  start_tile: 5
+  end_tile: 8
   playback: PLAYBACK_LOOP_FORWARD
-  fps: 60
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "right-blood"
-  start_tile: 25
-  end_tile: 25
-  playback: PLAYBACK_NONE
-  fps: 11
+  fps: 8
   flip_horizontal: 0
   flip_vertical: 0
 }
 animations {
   id: "right-idle"
-  start_tile: 23
-  end_tile: 23
-  playback: PLAYBACK_NONE
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "rightG"
-  start_tile: 31
-  end_tile: 32
-  playback: PLAYBACK_ONCE_FORWARD
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "rightG-idle"
-  start_tile: 33
-  end_tile: 33
-  playback: PLAYBACK_NONE
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "rightH"
-  start_tile: 27
-  end_tile: 28
-  playback: PLAYBACK_ONCE_FORWARD
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "rightH-idle"
-  start_tile: 29
-  end_tile: 29
-  playback: PLAYBACK_NONE
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "up"
-  start_tile: 15
-  end_tile: 16
+  start_tile: 1
+  end_tile: 4
   playback: PLAYBACK_LOOP_FORWARD
-  fps: 60
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "up-blood"
-  start_tile: 20
-  end_tile: 20
-  playback: PLAYBACK_NONE
-  fps: 11
+  fps: 8
   flip_horizontal: 0
   flip_vertical: 0
 }
 animations {
   id: "up-idle"
-  start_tile: 17
-  end_tile: 17
-  playback: PLAYBACK_NONE
-  fps: 11
-  flip_horizontal: 0
-  flip_vertical: 0
-}
-animations {
-  id: "upG"
-  start_tile: 21
-  end_tile: 22
-  playback: PLAYBACK_ONCE_FORWARD
-  fps: 11
+  start_tile: 9
+  end_tile: 12
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 8
   flip_horizontal: 0
   flip_vertical: 0
 }
