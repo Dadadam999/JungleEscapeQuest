@@ -11,6 +11,7 @@ use_accelerometer = 0
 [display]
 width = 1280
 height = 720
+high_dpi = 1
 
 [script]
 shared_state = 1
@@ -36,8 +37,8 @@ default_texture_min_filter = nearest
 default_texture_mag_filter = nearest
 
 [sprite]
-subpixels = 0
+subpixels = 1
 
 [label]
-subpixels = 0
+subpixels = 1
 

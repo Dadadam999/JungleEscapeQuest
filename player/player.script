@@ -1,6 +1,6 @@
 function init(self)
 	msg.post(".", "acquire_input_focus")
-	go.property("speed", 30)
+	go.property("speed", 80)
 	print(go.get_id())
 	self.position = vmath.vector3()
 	self.axis = vmath.vector3(0,1,0)
