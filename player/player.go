@@ -16,8 +16,8 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/player/player.tilesource\"\n"
-  "default_animation: \"up-idle\"\n"
+  data: "tile_set: \"/player/playerRUN.tilesource\"\n"
+  "default_animation: \"down\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
