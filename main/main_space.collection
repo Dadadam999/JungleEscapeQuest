@@ -3,9 +3,9 @@ instances {
   id: "player"
   prototype: "/player/player.go"
   position {
-    x: 980.0
-    y: 255.0
-    z: 0.2
+    x: 536.0
+    y: 301.0
+    z: 0.5
   }
   rotation {
     x: 0.0
@@ -46,6 +46,46 @@ instances {
     x: 344.0
     y: 317.0
     z: 2.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "object1"
+  prototype: "/levels/object1.go"
+  position {
+    x: 579.0
+    y: 458.0
+    z: 0.4
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "object2"
+  prototype: "/levels/object2.go"
+  position {
+    x: 391.0
+    y: 257.0
+    z: 0.4
   }
   rotation {
     x: 0.0
