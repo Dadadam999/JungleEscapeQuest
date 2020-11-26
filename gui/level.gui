@@ -1,4 +1,4 @@
-script: "/levels/level.gui_script"
+script: "/gui/level.gui_script"
 background_color {
   x: 0.0
   y: 0.0

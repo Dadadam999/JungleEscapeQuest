@@ -6,7 +6,7 @@ embedded_components {
   "mass: 0.0\n"
   "friction: 0.1\n"
   "restitution: 0.5\n"
-  "group: \"object\"\n"
+  "group: \"metal\"\n"
   "mask: \"hero\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"

@@ -121,10 +121,25 @@ collection_instances {
 }
 scale_along_z: 0
 embedded_instances {
-  id: "levels"
-  data: ""
+  id: "scripts"
+  data: "components {\n"
+  "  id: \"state_machine\"\n"
+  "  component: \"/main/state_machine.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
   position {
-    x: 33.0
+    x: 0.0
     y: 0.0
     z: 0.0
   }
@@ -141,10 +156,10 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "scripts"
+  id: "inventory_go"
   data: "components {\n"
-  "  id: \"state_machine\"\n"
-  "  component: \"/main/state_machine.script\"\n"
+  "  id: \"inventory\"\n"
+  "  component: \"/gui/inventory.gui\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"

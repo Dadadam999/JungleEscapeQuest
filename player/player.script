@@ -157,4 +157,14 @@ function on_message(self, message_id, message, sender)
 			end
 		end
 	end
+	
+	if message.group == hash("tree") then
+		msg.post("/inventory_go#inventory", "tree_take")
+		go.delete("/object1")
+	end
+
+	if message.group == hash("metal") then
+		msg.post("/inventory_go#inventory", "metal_take")
+		go.delete("/object2")
+	end
 end
