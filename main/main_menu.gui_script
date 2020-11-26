@@ -1,0 +1,53 @@
+CURRENT_PROXY = nil
+
+local LEVEL1_PROXY = "/levels#level1_proxy"
+local LEVEL2_PROXY = "/levels#level2_proxy"
+local LEVEL3_PROXY = "/levels#level3_proxy"
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+
+	--  Set Script Properties for the GUI Nodes
+	self.start_btn = gui.get_node("start_game")
+	--self.level1_button = gui.get_node("selectLevel1Button/button_body")
+
+
+	-- Disable GUI Nodes during Opening Logo Animations
+	--gui.set_enabled(self.menu_panel, false)
+	--gui.set_enabled(self.level1_button, true)
+	--gui.set_enabled(self.level2_button, false)
+	--gui.set_enabled(self.exit_button, false)
+end
+
+
+function final(self)
+	msg.post(".", "release_input_focus")
+end
+
+
+function on_input(self, action_id, action)
+	-- Process User Selection of the Level 1 Button
+	if action.pressed and gui.pick_node(self.start_btn, action.x, action.y) then
+		if gui.is_enabled(self.start_btn) then
+
+			-- Load the Level1 Collection
+			CURRENT_PROXY = LEVEL1_PROXY
+			msg.post(CURRENT_PROXY, "load")
+
+			-- Activate the Level Control GUI Set
+			--msg.post("main:/levelController#level_controls", "activate")
+			gui.set_enabled(self.start_btn, false)
+			-- Release Input Focus on the Main Menu
+			--msg.post(".", "release_input_focus")
+		end
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	-- When one of the Level Proxies is Loaded, Activate/deactivate Selected GUI Nodes
+	if message_id == hash("proxy_loaded") then
+		msg.post(sender, "enable")
+		
+		--msg.post(".", "release_input_focus")
+	end
+end

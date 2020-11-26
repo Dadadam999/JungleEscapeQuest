@@ -1,0 +1,58 @@
+	go.property("h_camera", 0)
+	go.property("w_camera", 0)
+
+function init(self)
+	msg.post(".", "acquire_camera_focus")
+
+	self.h_screen = tonumber(sys.get_config("display.height"))
+	self.w_screen = tonumber(sys.get_config("display.width"))
+
+	self.h_camera = self.h_screen
+	self.w_camera = self.w_screen
+
+	print(go.get_id())
+end
+
+function update(self, dt)
+	local player = go.get_position("/player")
+	local camera = go.get_position("/camera")
+	
+	camera.x = player.x - self.w_camera / 2
+	camera.y = player.y - self.h_camera / 2
+	
+	go.set_position(camera, "camera")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("movecam") then
+		print("check move cam")
+
+		local camera = go.get_position()
+
+		if message.state == "up" then
+			camera.y = camera.y + self.h_screen
+			self.h_camera = self.h_camera + self.h_screen
+			--go.animate(go.get_id(), "position.y", go.PLAYBACK_ONCE_FORWARD, self.h_camera, go.EASING_LINEAR, 1)
+		end
+
+		if message.state == "down" then
+			camera.y = camera.y - self.h_screen
+			self.h_camera = self.h_camera - self.h_screen
+		end
+
+		if message.state == "left" then
+			camera.x = camera.x - self.w_screen
+			self.w_camera = self.w_camera - self.w_screen
+		end
+
+		if message.state == "right" then
+			camera.x = camera.x + self.w_screen
+			self.w_camera = self.w_camera + self.w_screen
+		end
+
+		go.set_position(camera)
+	end
+
+end
+
+--comment fix
