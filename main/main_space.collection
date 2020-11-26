@@ -1,26 +1,130 @@
-@@ -3,9 +3,9 @@ instances {
+name: "main"
+instances {
   id: "player"
   prototype: "/player/player.go"
   position {
-    x: 983.0
-    y: 491.0
-    z: 0.0
-    x: 170.0
-    y: 158.0
-    z: 0.2
+    x: 536.0
+    y: 301.0
+    z: 0.5
   }
   rotation {
     x: 0.0
-@ -39,28 +39,12 @@ instances {
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "camera"
+  prototype: "/camera/camera.go"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "radio"
+  prototype: "/levels/radio.go"
+  position {
+    x: -574.0
+    y: 317.0
+    z: 2.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "object1"
+  prototype: "/levels/object1.go"
+  position {
+    x: 579.0
+    y: 458.0
+    z: 0.4
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "object2"
+  prototype: "/levels/object2.go"
+  position {
+    x: 391.0
+    y: 257.0
+    z: 0.4
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+collection_instances {
+  id: "level1"
+  collection: "/levels/level1.collection"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
     z: 1.0
   }
 }
 scale_along_z: 0
 embedded_instances {
-  id: "main_menu"
+  id: "scripts"
   data: "components {\n"
-  "  id: \"main_menu\"\n"
-  "  component: \"/main/main_menu.gui\"\n"
+  "  id: \"state_machine\"\n"
+  "  component: \"/main/state_machine.script\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"
@@ -34,31 +138,90 @@ embedded_instances {
   "  }\n"
   "}\n"
   ""
-collection_instances {
-  id: "level1"
-  collection: "/levels/level1.collection"
   position {
-    x: 640.0
-    y: 360.0
     x: 0.0
     y: 0.0
     z: 0.0
   }
   rotation {
-@ -75,6 +59,7 @@ embedded_instances {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
     z: 1.0
   }
 }
-scale_along_z: 0
 embedded_instances {
-  id: "levels"
+  id: "inventory_go"
   data: "components {\n"
-@ -124,7 +109,7 @@ embedded_instances {
+  "  id: \"inventory\"\n"
+  "  component: \"/gui/inventory.gui\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
   "}\n"
   ""
   position {
     x: 0.0
-    x: 33.0
     y: 0.0
     z: 0.0
   }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "think_go"
+  data: "components {\n"
+  "  id: \"think\"\n"
+  "  component: \"/gui/think.gui\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
