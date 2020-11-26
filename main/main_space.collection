@@ -1,130 +1,26 @@
-name: "main"
-instances {
+@@ -3,9 +3,9 @@ instances {
   id: "player"
   prototype: "/player/player.go"
   position {
-    x: 536.0
-    y: 301.0
-    z: 0.5
+    x: 983.0
+    y: 491.0
+    z: 0.0
+    x: 170.0
+    y: 158.0
+    z: 0.2
   }
   rotation {
     x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "camera"
-  prototype: "/camera/camera.go"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "radio"
-  prototype: "/levels/radio.go"
-  position {
-    x: -574.0
-    y: 317.0
-    z: 2.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "object1"
-  prototype: "/levels/object1.go"
-  position {
-    x: 579.0
-    y: 458.0
-    z: 0.6
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-instances {
-  id: "object2"
-  prototype: "/levels/object2.go"
-  position {
-    x: 391.0
-    y: 257.0
-    z: 0.6
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-collection_instances {
-  id: "level1"
-  collection: "/levels/level1.collection"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
+@ -39,28 +39,12 @@ instances {
     z: 1.0
   }
 }
 scale_along_z: 0
 embedded_instances {
-  id: "scripts"
+  id: "main_menu"
   data: "components {\n"
-  "  id: \"state_machine\"\n"
-  "  component: \"/main/state_machine.script\"\n"
+  "  id: \"main_menu\"\n"
+  "  component: \"/main/main_menu.gui\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"
@@ -138,155 +34,31 @@ embedded_instances {
   "  }\n"
   "}\n"
   ""
+collection_instances {
+  id: "level1"
+  collection: "/levels/level1.collection"
   position {
+    x: 640.0
+    y: 360.0
     x: 0.0
     y: 0.0
     z: 0.0
   }
   rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
+@ -75,6 +59,7 @@ embedded_instances {
     z: 1.0
   }
 }
+scale_along_z: 0
 embedded_instances {
-  id: "inventory_go"
+  id: "levels"
   data: "components {\n"
-  "  id: \"inventory\"\n"
-  "  component: \"/gui/inventory.gui\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
+@ -124,7 +109,7 @@ embedded_instances {
   "}\n"
   ""
   position {
     x: 0.0
+    x: 33.0
     y: 0.0
     z: 0.0
   }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-embedded_instances {
-<<<<<<< HEAD
-  id: "think_go"
-  data: "components {\n"
-  "  id: \"think\"\n"
-  "  component: \"/gui/think.gui\"\n"
-=======
-  id: "mech"
-  data: "embedded_components {\n"
-  "  id: \"sprite\"\n"
-  "  type: \"sprite\"\n"
-  "  data: \"tile_set: \\\"/assets/global.atlas\\\"\\n"
-  "default_animation: \\\"Mech_1\\\"\\n"
-  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "embedded_components {\n"
-  "  id: \"collisionobject\"\n"
-  "  type: \"collisionobject\"\n"
-  "  data: \"collision_shape: \\\"\\\"\\n"
-  "type: COLLISION_OBJECT_TYPE_KINEMATIC\\n"
-  "mass: 0.0\\n"
-  "friction: 0.1\\n"
-  "restitution: 0.5\\n"
-  "group: \\\"wall\\\"\\n"
-  "mask: \\\"hero\\\"\\n"
-  "embedded_collision_shape {\\n"
-  "  shapes {\\n"
-  "    shape_type: TYPE_BOX\\n"
-  "    position {\\n"
-  "      x: -1.0\\n"
-  "      y: -10.0\\n"
-  "      z: 0.0\\n"
-  "    }\\n"
-  "    rotation {\\n"
-  "      x: 0.0\\n"
-  "      y: 0.0\\n"
-  "      z: 0.0\\n"
-  "      w: 1.0\\n"
-  "    }\\n"
-  "    index: 0\\n"
-  "    count: 3\\n"
-  "  }\\n"
-  "  data: 11.357\\n"
-  "  data: 4.017\\n"
-  "  data: 10.0\\n"
-  "}\\n"
-  "linear_damping: 0.0\\n"
-  "angular_damping: 0.0\\n"
-  "locked_rotation: false\\n"
-  "\"\n"
->>>>>>> c7bee5967214c4d68047ca9cdce137bf5ebed8cb
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  ""
-  position {
-<<<<<<< HEAD
-    x: 0.0
-    y: 0.0
-    z: 0.0
-=======
-    x: 382.0
-    y: 150.0
-    z: 0.6
->>>>>>> c7bee5967214c4d68047ca9cdce137bf5ebed8cb
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
