@@ -452,7 +452,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -518,7 +518,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -580,7 +580,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -642,7 +642,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -706,7 +706,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -768,7 +768,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -830,7 +830,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -892,7 +892,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -955,7 +955,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -1017,7 +1017,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -1079,7 +1079,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -1141,7 +1141,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -1203,7 +1203,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -1265,7 +1265,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
@@ -1327,7 +1327,7 @@ nodes {
   line_break: true
   layer: ""
   inherit_alpha: true
-  alpha: 1.0
+  alpha: 0.0
   outline_alpha: 1.0
   shadow_alpha: 1.0
   template_node_child: false
