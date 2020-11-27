@@ -45,6 +45,8 @@ embedded_components {
   "mask: \"wall\"\n"
   "mask: \"lvl1obj1\"\n"
   "mask: \"lvl1obj2\"\n"
+  "mask: \"lvl2obj1\"\n"
+  "mask: \"lvl2obj2\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"

@@ -1,6 +1,7 @@
 local data = require "main.data"
 function init(self)
 	msg.post(".", "acquire_input_focus")
+	msg.post(".", "change_level2")
 	go.property("speed", 80)
 	print(go.get_id())
 	self.position = vmath.vector3()
@@ -147,8 +148,19 @@ end
 
 function on_message(self, message_id, message, sender)
 
-	if message_id == hash("change_level") then
-		
+	if message_id == hash("change_level1") then
+		data.CURRENT_LEVEL = "level1"
+		go.set_position(vmath.vector3(530,300,0.5))
+	end
+
+	if message_id == hash("change_level2") then
+		data.CURRENT_LEVEL = "level2"
+		go.set_position(vmath.vector3(2450,160,0.5))
+	end
+
+	if message_id == hash("change_level3") then
+		data.CURRENT_LEVEL = "level3"
+		go.set_position(vmath.vector3(530,300,0.5))
 	end
 	
 	if message_id == hash("contact_point_response") then
