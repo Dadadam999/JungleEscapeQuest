@@ -26,7 +26,8 @@ embedded_components {
   "mass: 0.0\n"
   "friction: 0.1\n"
   "restitution: 0.5\n"
-  "group: \"tree\"\n"
+  "group: \"lvl1obj1\"\n"
+  "mask: \"hero\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_SPHERE\n"
@@ -44,40 +45,11 @@ embedded_components {
   "    index: 0\n"
   "    count: 1\n"
   "  }\n"
-  "  data: 29.5845\n"
-  "}\n"
-  "linear_damping: 0.0\n"
-  "angular_damping: 0.0\n"
-  "locked_rotation: false\n"
-  ""
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-embedded_components {
-  id: "collisionobject1"
-  type: "collisionobject"
-  data: "collision_shape: \"\"\n"
-  "type: COLLISION_OBJECT_TYPE_STATIC\n"
-  "mass: 0.0\n"
-  "friction: 0.1\n"
-  "restitution: 0.5\n"
-  "group: \"tree\"\n"
-  "mask: \"hero\"\n"
-  "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
   "    position {\n"
-  "      x: -1.0\n"
-  "      y: -17.0\n"
+  "      x: 0.0\n"
+  "      y: -19.0\n"
   "      z: 0.0\n"
   "    }\n"
   "    rotation {\n"
@@ -86,12 +58,13 @@ embedded_components {
   "      z: 0.0\n"
   "      w: 1.0\n"
   "    }\n"
-  "    index: 0\n"
+  "    index: 1\n"
   "    count: 3\n"
   "  }\n"
-  "  data: 19.4435\n"
-  "  data: 8.2035\n"
-  "  data: 10.4\n"
+  "  data: 41.4185\n"
+  "  data: 21.6945\n"
+  "  data: 8.6025\n"
+  "  data: 8.7585\n"
   "}\n"
   "linear_damping: 0.0\n"
   "angular_damping: 0.0\n"

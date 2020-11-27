@@ -1,4 +1,8 @@
 script: "/main/main_menu.gui_script"
+textures {
+  name: "global"
+  texture: "/assets/global.atlas"
+}
 background_color {
   x: 0.0
   y: 0.0
