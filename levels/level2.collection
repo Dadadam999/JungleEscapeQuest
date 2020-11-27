@@ -4,7 +4,7 @@ embedded_instances {
   id: "tile"
   data: "components {\n"
   "  id: \"level2\"\n"
-  "  component: \"/levels/level2.tilemap\"\n"
+  "  component: \"/levels/level_I.tilemap\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"
