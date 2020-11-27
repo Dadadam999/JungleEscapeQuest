@@ -10,7 +10,7 @@ function update(self, dt)
 	local pos = gui.get_position(self.robot)
 	
 	if pos.x < gui.get_position(self.head).x then 
-		pos.x = pos.x + 0.01
+		pos.x = pos.x + 0.03
 		gui.set_position(self.robot, pos)
 	else
 		msg.post("/lose_go#lose", "load_lose")
