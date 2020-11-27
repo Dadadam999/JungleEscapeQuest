@@ -79,26 +79,6 @@ collection_instances {
     z: 1.0
   }
 }
-collection_instances {
-  id: "level3"
-  collection: "/levels/level3.collection"
-  position {
-    x: 3000.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
 scale_along_z: 0
 embedded_instances {
   id: "scripts"
@@ -155,21 +135,6 @@ embedded_instances {
   "components {\n"
   "  id: \"inventory2\"\n"
   "  component: \"/gui/inventory2.gui\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  "components {\n"
-  "  id: \"inventory3\"\n"
-  "  component: \"/gui/inventory3.gui\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"

@@ -18,14 +18,6 @@ M.LEVEL2_SELECT1 = true
 M.LEVEL2_SELECT2 = false
 M.LEVEL2_SELECT3 = false
 
--- нашли ли предметы на третьем лвле
-M.LEVEL3_OBJECT1_SEARCHED = false
-M.LEVEL3_OBJECT2_SEARCHED = false
---правильные или не правильные ответы на третьем лвле
-M.LEVEL3_SELECT1 = false
-M.LEVEL3_SELECT2 = false
-M.LEVEL3_SELECT3 = true
-
 function M.reset()
 	M.GAME_OVER = false
 
@@ -34,10 +26,6 @@ function M.reset()
 
 	M.LEVEL2_OBJECT1_SEARCHED = false
 	M.LEVEL2_OBJECT2_SEARCHED = false
-
-	M.LEVEL3_OBJECT1_SEARCHED = false
-	M.LEVEL4_OBJECT2_SEARCHED = false
 end
-
 
 return M

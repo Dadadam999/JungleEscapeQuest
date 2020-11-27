@@ -1,34 +1,10 @@
 local data = require "main.data"
-function init(self)
-	msg.post(".", "acquire_input_focus")
 
-	self.lvl1_obj1 = gui.get_node("lvl1_obj1")
-	self.lvl1_obj2 = gui.get_node("lvl1_obj2")
-	self.lvl2_obj1 = gui.get_node("lvl2_obj1")
-	self.lvl2_obj2 = gui.get_node("lvl2_obj2")
-	self.lvl3_obj1 = gui.get_node("lvl3_obj1")
-	self.lvl3_obj2 = gui.get_node("lvl3_obj2")
-	self.think_btn = gui.get_node("think_btn")
-	self.exit = gui.get_node("exit")
-	self.lvl1_v1 = gui.get_node("lvl1_v1")
-	self.lvl1_v2 = gui.get_node("lvl1_v2")
-	self.lvl1_v3 = gui.get_node("lvl1_v3")
-	self.lvl2_v1 = gui.get_node("lvl2_v1")
-	self.lvl2_v2 = gui.get_node("lvl2_v2")
-	self.lvl2_v3 = gui.get_node("lvl2_v3")
-	self.lvl3_v1 = gui.get_node("lvl3_v1")
-	self.lvl3_v2 = gui.get_node("lvl3_v2")
-	self.lvl3_v3 = gui.get_node("lvl3_v3")
-	self.bg = gui.get_node("bg")
-	self.cell1 = gui.get_node("cell1")
-	self.cell2 = gui.get_node("cell2")
-	
+function reset_menu(self)
 	gui.set_enabled(self.lvl1_obj1, false)
 	gui.set_enabled(self.lvl1_obj2, false)
 	gui.set_enabled(self.lvl2_obj1, false)
 	gui.set_enabled(self.lvl2_obj2, false)
-	gui.set_enabled(self.lvl3_obj1, false)
-	gui.set_enabled(self.lvl3_obj2, false)
 	gui.set_enabled(self.think_btn, false)
 	gui.set_enabled(self.lvl1_v1, false)
 	gui.set_enabled(self.lvl1_v2, false)
@@ -36,47 +12,40 @@ function init(self)
 	gui.set_enabled(self.lvl2_v1, false)
 	gui.set_enabled(self.lvl2_v2, false)
 	gui.set_enabled(self.lvl2_v3, false)
-	gui.set_enabled(self.lvl3_v1, false)
-	gui.set_enabled(self.lvl3_v2, false)
-	gui.set_enabled(self.lvl3_v3, false)
 	gui.set_enabled(self.exit, false)
 	gui.set_enabled(self.bg, false)
 	gui.set_enabled(self.cell1, false)
 	gui.set_enabled(self.cell2, false)
 end
 
+function init(self)
+	msg.post(".", "acquire_input_focus")
 
-function final(self)
-	--msg.post(".", "release_input_focus")
+	self.lvl1_obj1 = gui.get_node("lvl1_obj1")
+	self.lvl1_obj2 = gui.get_node("lvl1_obj2")
+	self.lvl2_obj1 = gui.get_node("lvl2_obj1")
+	self.lvl2_obj2 = gui.get_node("lvl2_obj2")
+	self.think_btn = gui.get_node("think_btn")
+	
+	self.lvl1_v1 = gui.get_node("lvl1_v1")
+	self.lvl1_v2 = gui.get_node("lvl1_v2")
+	self.lvl1_v3 = gui.get_node("lvl1_v3")
+	self.lvl2_v1 = gui.get_node("lvl2_v1")
+	self.lvl2_v2 = gui.get_node("lvl2_v2")
+	self.lvl2_v3 = gui.get_node("lvl2_v3")
+
+	self.exit = gui.get_node("exit")
+	self.bg = gui.get_node("bg")
+	self.cell1 = gui.get_node("cell1")
+	self.cell2 = gui.get_node("cell2")
+	
+	reset_menu(self)
 end
-
-
--- -------------------------------------------------------------------------------------------
--- Input Processes
 
 function on_input(self, action_id, action)
 	-- Process User Selection of the Level 1 Button
 	if action.pressed and gui.pick_node(self.exit, action.x, action.y) then
-		gui.set_enabled(self.lvl1_obj1, false)
-		gui.set_enabled(self.lvl1_obj2, false)
-		gui.set_enabled(self.lvl2_obj1, false)
-		gui.set_enabled(self.lvl2_obj2, false)
-		gui.set_enabled(self.lvl3_obj1, false)
-		gui.set_enabled(self.lvl3_obj2, false)
-		gui.set_enabled(self.think_btn, false)
-		gui.set_enabled(self.lvl1_v1, false)
-		gui.set_enabled(self.lvl1_v2, false)
-		gui.set_enabled(self.lvl1_v3, false)
-		gui.set_enabled(self.lvl2_v1, false)
-		gui.set_enabled(self.lvl2_v2, false)
-		gui.set_enabled(self.lvl2_v3, false)
-		gui.set_enabled(self.lvl3_v1, false)
-		gui.set_enabled(self.lvl3_v2, false)
-		gui.set_enabled(self.lvl3_v3, false)
-		gui.set_enabled(self.exit, false)
-		gui.set_enabled(self.bg, false)
-		gui.set_enabled(self.cell1, false)
-		gui.set_enabled(self.cell2, false)
+		reset_menu(self)
 	end
 
 	if action.pressed and gui.pick_node(self.think_btn, action.x, action.y) and gui.is_enabled(self.think_btn) then
@@ -88,6 +57,7 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("load_think") then
+		reset_menu(self)
 		if data.CURRENT_LEVEL == "level1" and data.LEVEL1_OBJECT1_SEARCHED then
 			gui.set_enabled(self.lvl1_obj1, true)
 		end
@@ -96,7 +66,15 @@ function on_message(self, message_id, message, sender)
 			gui.set_enabled(self.lvl1_obj2, true)
 		end
 
-		if (data.LEVEL1_OBJECT1_SEARCHED and data.LEVEL1_OBJECT2_SEARCHED) or (data.LEVEL2_OBJECT1_SEARCHED and data.LEVEL2_OBJECT2_SEARCHED) or (data.LEVEL3_OBJECT1_SEARCHED and data.LEVEL3_OBJECT2_SEARCHED) then		
+		if data.CURRENT_LEVEL == "level2" and data.LEVEL2_OBJECT1_SEARCHED then
+			gui.set_enabled(self.lvl2_obj1, true)
+		end
+
+		if data.CURRENT_LEVEL == "level2" and data.LEVEL2_OBJECT2_SEARCHED then
+			gui.set_enabled(self.lvl2_obj2, true)
+		end
+		
+		if (data.LEVEL1_OBJECT1_SEARCHED and data.LEVEL1_OBJECT2_SEARCHED) or (data.LEVEL2_OBJECT1_SEARCHED and data.LEVEL2_OBJECT2_SEARCHED) then
 			gui.set_enabled(self.think_btn, true)
 		end
 

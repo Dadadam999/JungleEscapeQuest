@@ -1,7 +1,7 @@
 name: "default"
 instances {
   id: "object1"
-  prototype: "/items/object1lvl1.go"
+  prototype: "/items/lvl1_object1.go"
   position {
     x: 579.0
     y: 458.0
@@ -21,7 +21,7 @@ instances {
 }
 instances {
   id: "object2"
-  prototype: "/items/object2lvl1.go"
+  prototype: "/items/lvl1_object2.go"
   position {
     x: 391.0
     y: 257.0
