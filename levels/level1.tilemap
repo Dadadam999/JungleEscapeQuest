@@ -25205,8 +25205,13 @@ layers {
   }
 }
 layers {
+  id: "Tile Layer 3"
+  z: 0.0
+  is_visible: 1
+}
+layers {
   id: "ground2"
-  z: 1.0
+  z: 0.6
   is_visible: 1
   cell {
     x: 45
@@ -27189,11 +27194,6 @@ layers {
     h_flip: 0
     v_flip: 0
   }
-}
-layers {
-  id: "Tile Layer 3"
-  z: 2.0
-  is_visible: 1
 }
 material: "/builtins/materials/tile_map.material"
 blend_mode: BLEND_MODE_ALPHA
