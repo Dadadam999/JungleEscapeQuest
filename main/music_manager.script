@@ -5,27 +5,28 @@ end
 function on_message(self, message_id, message, sender)
 	
 	if message_id == hash("walk-hero") then
-		
+		--step_jungle_1-4 (1 level)
+		--step_solid_ground (2 level)
 	end
 
 	if message_id == hash("stay-hero") then
-
+		--
 	end
 	
 	if message_id == hash("open-gui") then
-
+		--window_switch
 	end
 	
 	if message_id == hash("call") then
-
+		--radio_1
 	end
 
 	if message_id == hash("open-radio") then
-
+		--window_switch
 	end
 	
 	if message_id == hash("searched-item") then
-
+		--attention2
 	end
 	
 end
