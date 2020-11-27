@@ -11,6 +11,10 @@ fonts {
   name: "noticeFont"
   font: "/assets/fonts/noticeFont.font"
 }
+fonts {
+  name: "pixel"
+  font: "/gui/pixel.font"
+}
 textures {
   name: "global"
   texture: "/assets/global.atlas"
@@ -325,7 +329,7 @@ nodes {
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "No"
-  font: "menuFont"
+  font: "pixel"
   id: "lvl1_v1"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -387,7 +391,7 @@ nodes {
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "No"
-  font: "menuFont"
+  font: "pixel"
   id: "lvl1_v3"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -449,7 +453,7 @@ nodes {
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "Yes"
-  font: "menuFont"
+  font: "pixel"
   id: "lvl1_v2"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -727,7 +731,7 @@ nodes {
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "No"
-  font: "menuFont"
+  font: "pixel"
   id: "lvl2_v1"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -789,7 +793,7 @@ nodes {
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "No"
-  font: "menuFont"
+  font: "pixel"
   id: "lvl2_v2"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -851,7 +855,7 @@ nodes {
   type: TYPE_TEXT
   blend_mode: BLEND_MODE_ALPHA
   text: "Yes"
-  font: "menuFont"
+  font: "pixel"
   id: "lvl2_v3"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
