@@ -1,4 +1,4 @@
-script: ""
+script: "/gui/radio_dialog.gui_script"
 fonts {
   name: "radio"
   font: "/assets/fonts/radio.font"

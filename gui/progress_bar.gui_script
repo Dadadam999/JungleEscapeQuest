@@ -1,0 +1,27 @@
+local data = require "main.data"
+
+function init(self)
+	self.robot = gui.get_node("robot")
+	self.head = gui.get_node("head")
+	self.progress_line = gui.get_node("progress_line")
+end
+
+function update(self, dt)
+	local pos = gui.get_position(self.robot)
+	
+	if pos.x < gui.get_position(self.head).x then 
+		pos.x = pos.x + 0.01
+		gui.set_position(self.robot, pos)
+	else
+		msg.post("/lose_go#lose", "load_lose")
+		data.GAME_OVER = true
+	end	
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("plus_robot") then
+		local pos = gui.get_position(self.robot) 
+			pos.x = pos.x + 50
+			gui.set_position(self.robot, pos)
+	end
+end
