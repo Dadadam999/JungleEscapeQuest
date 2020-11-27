@@ -50,7 +50,6 @@ function on_message(self, message_id, message, sender)
 	
 	if message_id == hash("open-gui") and not data.GAME_OVER then
 		msg.post("/sounds_go#gui_switch", "play_sound")
-		print("ss")
 	end
 	
 	if message_id == hash("call") and not data.GAME_OVER then
