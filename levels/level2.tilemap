@@ -25206,7 +25206,7 @@ layers {
 }
 layers {
   id: "Tile Layer 2"
-  z: 1.0
+  z: 0.0
   is_visible: 1
   cell {
     x: 55
@@ -31364,7 +31364,7 @@ layers {
 }
 layers {
   id: "Tile Layer 3"
-  z: 2.0
+  z: 0.0
   is_visible: 1
   cell {
     x: 9
