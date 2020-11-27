@@ -21354,9 +21354,9 @@ layers {
   cell {
     x: 39
     y: 9
-    tile: 2
-    h_flip: 1
-    v_flip: 0
+    tile: 5
+    h_flip: 0
+    v_flip: 1
   }
   cell {
     x: 55
@@ -24826,9 +24826,9 @@ layers {
   cell {
     x: 38
     y: 34
-    tile: 2
-    h_flip: 1
-    v_flip: 0
+    tile: 5
+    h_flip: 0
+    v_flip: 1
   }
   cell {
     x: 45
