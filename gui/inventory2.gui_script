@@ -14,4 +14,9 @@ function on_message(self, message_id, message, sender)
 	if message_id == hash("lvl2obj2") then
 		gui.set_enabled(self.obj2, true)
 	end
+	
+	if message_id == hash("reset") then
+		gui.set_enabled(self.obj1, false)
+		gui.set_enabled(self.obj2, false)
+	end
 end

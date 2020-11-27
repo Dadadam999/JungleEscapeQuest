@@ -6,6 +6,7 @@ function init(self)
 	gui.set_enabled(self.obj2, false)
 end
 
+
 function on_message(self, message_id, message, sender)
 	if message_id == hash("lvl1obj1") then
 		gui.set_enabled(self.obj1, true)
@@ -13,5 +14,10 @@ function on_message(self, message_id, message, sender)
 
 	if message_id == hash("lvl1obj2") then
 		gui.set_enabled(self.obj2, true)
+	end
+
+	if message_id == hash("reset") then
+		gui.set_enabled(self.obj1, false)
+		gui.set_enabled(self.obj2, false)
 	end
 end

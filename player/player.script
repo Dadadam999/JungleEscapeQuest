@@ -1,7 +1,7 @@
 local data = require "main.data"
 function init(self)
 	msg.post(".", "acquire_input_focus")
-	msg.post(".", "change_level2")
+	msg.post(".", "change_level1")
 	go.property("speed", 80)
 	print(go.get_id())
 	self.position = vmath.vector3()

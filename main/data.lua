@@ -2,6 +2,7 @@ local M = {}
 
 M.GAME_OVER = false
 M.CURRENT_LEVEL = "level1"
+
 -- нашли ли предметы на первом лвле
 M.LEVEL1_OBJECT1_SEARCHED = false
 M.LEVEL1_OBJECT2_SEARCHED = false
