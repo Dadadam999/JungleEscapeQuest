@@ -42,7 +42,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "global/gameover"
+  texture: "global/win"
   id: "box"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
