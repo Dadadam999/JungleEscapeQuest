@@ -3,9 +3,129 @@ tile_width: 16
 tile_height: 24
 tile_margin: 0
 tile_spacing: 0
-collision: ""
+collision: "/assets/player/playerRUN.png"
 material_tag: "tile"
-collision_groups: "default"
+convex_hulls {
+  index: 0
+  count: 8
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 8
+  count: 11
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 19
+  count: 8
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 27
+  count: 10
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 37
+  count: 8
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 45
+  count: 11
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 56
+  count: 8
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 64
+  count: 10
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 74
+  count: 10
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 84
+  count: 11
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 95
+  count: 10
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 105
+  count: 11
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 116
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 116
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 116
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 116
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 116
+  count: 10
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 126
+  count: 11
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 137
+  count: 10
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 147
+  count: 11
+  collision_group: "hero"
+}
+convex_hulls {
+  index: 158
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 158
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 158
+  count: 0
+  collision_group: ""
+}
+convex_hulls {
+  index: 158
+  count: 0
+  collision_group: ""
+}
+collision_groups: "hero"
 animations {
   id: "down"
   start_tile: 17

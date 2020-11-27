@@ -3,8 +3,8 @@ scale_along_z: 0
 embedded_instances {
   id: "tile"
   data: "components {\n"
-  "  id: \"level2\"\n"
-  "  component: \"/levels/level2.tilemap\"\n"
+  "  id: \"level3\"\n"
+  "  component: \"/levels/level3.tilemap\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"
@@ -38,8 +38,8 @@ embedded_instances {
 embedded_instances {
   id: "inventory_gui"
   data: "components {\n"
-  "  id: \"inventory2\"\n"
-  "  component: \"/gui/inventory2.gui\"\n"
+  "  id: \"inventory3\"\n"
+  "  component: \"/gui/inventory3.gui\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"

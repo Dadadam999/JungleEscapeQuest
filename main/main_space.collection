@@ -3,9 +3,9 @@ instances {
   id: "player"
   prototype: "/player/player.go"
   position {
-    x: 2450.0
-    y: 160.0
-    z: 0.5
+    x: 536.0
+    y: 301.0
+    z: 1.0
   }
   rotation {
     x: 0.0
@@ -26,6 +26,46 @@ instances {
     x: 0.0
     y: 0.0
     z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "object1"
+  prototype: "/items/object1lvl1.go"
+  position {
+    x: 579.0
+    y: 458.0
+    z: 0.6
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "object2"
+  prototype: "/items/object2lvl1.go"
+  position {
+    x: 391.0
+    y: 257.0
+    z: 0.4
   }
   rotation {
     x: 0.0
@@ -64,6 +104,26 @@ collection_instances {
   collection: "/levels/level2.collection"
   position {
     x: 1500.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+collection_instances {
+  id: "level3"
+  collection: "/levels/level3.collection"
+  position {
+    x: 3000.0
     y: 0.0
     z: 0.0
   }
@@ -135,6 +195,21 @@ embedded_instances {
   "components {\n"
   "  id: \"inventory2\"\n"
   "  component: \"/gui/inventory2.gui\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"inventory3\"\n"
+  "  component: \"/gui/inventory3.gui\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"
