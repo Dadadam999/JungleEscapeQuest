@@ -1,32 +1,64 @@
+local rand = math.random(1, 1)
+local data = require "main.data"
+
 function init(self)
 -- основная музыка
+end
+
+function reset()
+	msg.post("/sounds_go#walk1lvl1","stop_sound")
+	msg.post("/sounds_go#walk2lvl1","stop_sound")
+	msg.post("/sounds_go#walk3lvl1","stop_sound")
+	msg.post("/sounds_go#walk4lvl1","stop_sound")
 end
 
 function on_message(self, message_id, message, sender)
 	
 	if message_id == hash("walk-hero") then
-		--step_jungle_1-4 (1 level)
-		--step_solid_ground (2 level)
-	end
+		if data.CURRENT_LEVEL == "level1" then
+			rand = math.random(1, 4)
 
-	if message_id == hash("stay-hero") then
-		--
+			if rand == 1 then		
+				msg.post("/sounds_go#walk1lvl1","play_sound")
+			end
+
+			if rand == 2 then
+				msg.post("/sounds_go#walk2lvl1","play_sound")
+			end
+
+			if rand == 3 then
+				msg.post("/sounds_go#walk3lvl1","play_sound")
+			end
+
+			if rand == 4 then
+				msg.post("/sounds_go#walk4lvl1","play_sound")
+			end
+		end
+
+		if data.CURRENT_LEVEL == "level2" then
+			rand = math.random(1, 2)
+			
+			if rand == 1 then
+				msg.post("/sounds_go#walk1lvl2","play_sound")
+			end
+
+			if rand == 2 then
+				msg.post("/sounds_go#walk2lvl2","play_sound")
+			end
+		end
 	end
 	
 	if message_id == hash("open-gui") then
-		--window_switch
+		msg.post("/sounds_go#gui_switch", "play_sound")
+		print("ss")
 	end
 	
 	if message_id == hash("call") then
-		--radio_1
-	end
-
-	if message_id == hash("open-radio") then
-		--window_switch
+		msg.post("/sounds_go#call", "play_sound")
 	end
 	
 	if message_id == hash("searched-item") then
-		--attention2
+		msg.post("/sounds_go#searched", "play_sound")
 	end
 	
 end

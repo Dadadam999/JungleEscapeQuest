@@ -47,6 +47,7 @@ if key == hash("W") then
 		self.key_input = "MoveUpPlayer"
 		self.axis.y = 1
 		key = self.key_input
+		msg.post("/scripts#music_manager","walk-hero")
 		
 		if action.pressed then
 			self.input_press = true
@@ -63,6 +64,7 @@ if key == hash("W") then
 		self.key_input = "MoveDownPlayer"
 		self.axis.y = -1
 		key = self.key_input
+		msg.post("/scripts#music_manager","walk-hero")
 		
 		if action.pressed then
 			self.input_press = true
@@ -79,6 +81,7 @@ if key == hash("W") then
 		self.key_input = "MoveLeftPlayer"
 		self.axis.x = -1
 		key = self.key_input
+		msg.post("/scripts#music_manager","walk-hero")
 		
 		if action.pressed then
 			self.input_press = true
@@ -95,6 +98,7 @@ if key == hash("W") then
 		self.key_input = "MoveRightPlayer"
 		self.axis.x = 1
 		key = self.key_input
+		msg.post("/scripts#music_manager","walk-hero")
 			
 		if action.pressed then
 			self.input_press = true
@@ -109,6 +113,7 @@ if key == hash("W") then
 
 	if key == hash("Q") then
 		msg.post("/think_go#think", "load_think")
+		msg.post("/scripts#music_manager", "open-gui")
 	end
 
 	if key == hash("E") then
@@ -175,20 +180,24 @@ function on_message(self, message_id, message, sender)
 	if message.group == hash("lvl1obj1") and self.pressE then
 		msg.post("/inventorys_go#inventory1", "lvl1obj1")
 		data.LEVEL1_OBJECT1_SEARCHED = true
+		msg.post("/scripts#music_manager", "searched-item")
 	end
 
 	if message.group == hash("lvl1obj2") and self.pressE  then
 		msg.post("/inventorys_go#inventory1", "lvl1obj2")
 		data.LEVEL1_OBJECT2_SEARCHED = true
+		msg.post("/scripts#music_manager", "searched-item")
 	end
 
 	if message.group == hash("lvl2obj1") and self.pressE then
 		msg.post("/inventorys_go#inventory2", "lvl2obj1")
 		data.LEVEL2_OBJECT1_SEARCHED = true
+		msg.post("/scripts#music_manager", "searched-item")
 	end
 
 	if message.group == hash("lvl2obj2") and self.pressE  then
 		msg.post("/inventorys_go#inventory2", "lvl2obj2")
 		data.LEVEL2_OBJECT2_SEARCHED = true
+		msg.post("/scripts#music_manager", "searched-item")
 	end
 end

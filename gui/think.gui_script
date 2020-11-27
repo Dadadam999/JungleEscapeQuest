@@ -46,50 +46,54 @@ function on_input(self, action_id, action)
 	-- Process User Selection of the Level 1 Button
 	if action.pressed and gui.pick_node(self.exit, action.x, action.y) then
 		reset_menu(self)
+		msg.post("/scripts#music_manager", "open-gui")
 	end
 
 	if action.pressed and gui.pick_node(self.think_btn, action.x, action.y) and gui.is_enabled(self.think_btn) and data.CURRENT_LEVEL == "level1" then
 		gui.set_enabled(self.lvl1_v1, true)
 		gui.set_enabled(self.lvl1_v2, true)
 		gui.set_enabled(self.lvl1_v3, true)
+		msg.post("/scripts#music_manager", "open-gui")
 	end
 
 	if action.pressed and gui.pick_node(self.think_btn, action.x, action.y) and gui.is_enabled(self.think_btn) and data.CURRENT_LEVEL == "level2" then
 		gui.set_enabled(self.lvl2_v1, true)
 		gui.set_enabled(self.lvl2_v2, true)
 		gui.set_enabled(self.lvl2_v3, true)
+		msg.post("/scripts#music_manager", "open-gui")
 	end
 
 	if action.pressed and gui.pick_node(self.lvl1_v1, action.x, action.y) and gui.is_enabled(self.lvl1_v1) and data.CURRENT_LEVEL == "level1" then
-		
+		msg.post("/scripts#music_manager", "open-gui")
 	end
 
 	if action.pressed and gui.pick_node(self.lvl1_v2, action.x, action.y) and gui.is_enabled(self.lvl1_v2) and data.CURRENT_LEVEL == "level1" then
 		data.CURRENT_LEVEL = "level2"
 		msg.post("/inventorys_go#inventory1", "reset")
 		msg.post("/player", "change_level2")
+		msg.post("/scripts#music_manager", "open-gui")
 		reset_menu(self)
 	end
 
 	if action.pressed and gui.pick_node(self.lvl1_v3, action.x, action.y) and gui.is_enabled(self.lvl1_v3) and data.CURRENT_LEVEL == "level1" then
-
+		msg.post("/scripts#music_manager", "open-gui")
 	end
 
 	if action.pressed and gui.pick_node(self.lvl2_v1, action.x, action.y) and gui.is_enabled(self.lvl2_v1) and data.CURRENT_LEVEL == "level2" then
-
+		msg.post("/scripts#music_manager", "open-gui")
 	end
 
 	if action.pressed and gui.pick_node(self.lvl2_v2, action.x, action.y) and gui.is_enabled(self.lvl2_v2) and data.CURRENT_LEVEL == "level2" then
-
+		msg.post("/scripts#music_manager", "open-gui")
 	end
 
 	if action.pressed and gui.pick_node(self.lvl2_v3, action.x, action.y) and gui.is_enabled(self.lvl2_v3) and data.CURRENT_LEVEL == "level2" then
 		data.CURRENT_LEVEL = "end"
 		msg.post("/inventorys_go#inventory2", "reset")
 		msg.post("/radio_go#radio_dialog", "load_radio")
+		msg.post("/scripts#music_manager", "open-gui")
 		reset_menu(self)
 	end
-	
 end
 
 function on_message(self, message_id, message, sender)
