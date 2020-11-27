@@ -1,4 +1,44 @@
 name: "default"
+instances {
+  id: "object1"
+  prototype: "/items/lvl1_object1.go"
+  position {
+    x: 579.0
+    y: 458.0
+    z: 0.4
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "object2"
+  prototype: "/items/lvl1_object2.go"
+  position {
+    x: 391.0
+    y: 257.0
+    z: 0.4
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "tile"

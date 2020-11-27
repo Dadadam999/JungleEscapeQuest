@@ -1,6 +1,7 @@
 local data = require "main.data"
 function init(self)
 	msg.post(".", "acquire_input_focus")
+	msg.post(".", "change_level2")
 	go.property("speed", 80)
 	print(go.get_id())
 	self.position = vmath.vector3()
@@ -23,7 +24,7 @@ function update(self, dt)
 	local w_camera = go.get("/camera#script", "w_camera")
 	
 	if self.position.x > w_camera or self.position.y > h_camera or self.position.x < pos_camera.x or  self.position.y < pos_camera.y then
-			msg.post("/camera", "movecam", {state = self.state})
+		msg.post("/camera", "movecam", {state = self.state})
 	end
 	
 	if self.moving then	
@@ -134,21 +135,29 @@ function correct_axis(self) -- чтобы гг не ходил наискосо�
 	if self.key_input == "MoveUpPlayer" then
 		self.axis.y = 1
 	end
+	
 	if self.key_input == "MoveDownPlayer" then
 		self.axis.y = -1
 	end
+	
 	if self.key_input == "MoveLeftPlayer" then
 		self.axis.x = -1
 	end
+	
 	if self.key_input == "MoveRightPlayer" then
 		self.axis.x = 1
 	end
 end
 
 function on_message(self, message_id, message, sender)
+	if message_id == hash("change_level1") then
+		data.CURRENT_LEVEL = "level1"
+		go.set_position(vmath.vector3(530,300,0.5))
+	end
 
-	if message_id == hash("change_level") then
-		
+	if message_id == hash("change_level2") then
+		data.CURRENT_LEVEL = "level2"
+		go.set_position(vmath.vector3(2450,160,0.5))
 	end
 	
 	if message_id == hash("contact_point_response") then
@@ -171,5 +180,15 @@ function on_message(self, message_id, message, sender)
 	if message.group == hash("lvl1obj2") and self.pressE  then
 		msg.post("/inventorys_go#inventory1", "lvl1obj2")
 		data.LEVEL1_OBJECT2_SEARCHED = true
+	end
+
+	if message.group == hash("lvl2obj1") and self.pressE then
+		msg.post("/inventorys_go#inventory2", "lvl2obj1")
+		data.LEVEL2_OBJECT1_SEARCHED = true
+	end
+
+	if message.group == hash("lvl2obj2") and self.pressE  then
+		msg.post("/inventorys_go#inventory2", "lvl2obj2")
+		data.LEVEL2_OBJECT2_SEARCHED = true
 	end
 end
