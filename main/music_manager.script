@@ -14,7 +14,7 @@ end
 
 function on_message(self, message_id, message, sender)
 	
-	if message_id == hash("walk-hero") then
+	if message_id == hash("walk-hero") and not data.GAME_OVER then
 		if data.CURRENT_LEVEL == "level1" then
 			rand = math.random(1, 4)
 
@@ -48,16 +48,16 @@ function on_message(self, message_id, message, sender)
 		end
 	end
 	
-	if message_id == hash("open-gui") then
+	if message_id == hash("open-gui") and not data.GAME_OVER then
 		msg.post("/sounds_go#gui_switch", "play_sound")
 		print("ss")
 	end
 	
-	if message_id == hash("call") then
+	if message_id == hash("call") and not data.GAME_OVER then
 		msg.post("/sounds_go#call", "play_sound")
 	end
 	
-	if message_id == hash("searched-item") then
+	if message_id == hash("searched-item") and not data.GAME_OVER then
 		msg.post("/sounds_go#searched", "play_sound")
 	end
 	

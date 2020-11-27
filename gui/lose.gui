@@ -1,4 +1,4 @@
-script: ""
+script: "/gui/lose.gui_script"
 textures {
   name: "global"
   texture: "/assets/global.atlas"

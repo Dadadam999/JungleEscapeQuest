@@ -1,4 +1,11 @@
+local data = require "main.data"
+
 function init(self)
 	msg.post("#sound", "play_sound")
 end
 
+function update(self, dt)
+	if data.GAME_OVER then
+		msg.post("#sound", "stop_sound")
+	end
+end

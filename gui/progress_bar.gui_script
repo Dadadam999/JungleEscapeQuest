@@ -13,7 +13,7 @@ function update(self, dt)
 		pos.x = pos.x + 0.01
 		gui.set_position(self.robot, pos)
 	else
-		msg.post("/lose_go#lose", "load_lose")
+		msg.post("/endgame_go#lose", "lose")
 		data.GAME_OVER = true
 	end	
 end
